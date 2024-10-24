@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "beemania",
+	"version": "${version}",
+	"name": "Beemania",
+	"description": "This mod focuses on bees alongside forestry like genetics",
+	"authors": [
+		"Syeneca"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/beemania/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"beemania.syeneca_mod.Beemania"
+		],
+		"client": [
+			"beemania.syeneca_mod.BeemaniaClient"
+		]
+	},
+	"mixins": [
+		"beemania.mixins.json",
+		{
+			"config": "beemania.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
